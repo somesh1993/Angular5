@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<!-- <html> -->
+<div>
+  <form [formGroup]="loggedInsideForm" (ngSubmit) = "Login(loggedInsideForm.value)" >
+    <div>
+       <label>EmaiID: </label>
+       <input type="text" class="textbox" name="logemailId" placeholder="Email" formControlName="emailId">
+    </div>
+    <div><br/>
+       <label>Password: </label>
+       <input type="password" class="textbox" name="logpassword" [(ngModel)]="paswd" maxLength="20" placeholder="password" formControlName="password">
+    </div><br/>
+    <div>
+       <input type="submit" routerLink="/welcome" class="button default-button" value="LOGIN" [disabled]="!loggedInsideForm.valid">
+    </div><br/>
+  </form>
+</div>
+<!-- </html> -->
+
+

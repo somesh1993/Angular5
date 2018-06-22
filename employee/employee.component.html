@@ -1,0 +1,32 @@
+<div>
+  <form [formGroup]="loggedInForm" (ngSubmit) = "mdfLogin(loggedInForm.value)" >
+    <div>
+       <label>EmaiID: </label>
+       <input type="text" class="textbox" name="emailId" placeholder="Email" formControlName="emailId">
+    </div>
+    <div><br/>
+       <label>Password: </label>
+       <input type="password" class="textbox" name="password" [(ngModel)]="paswd" maxLength="20" placeholder="password" formControlName="password">
+    </div><br/>
+    <input #savePasswordCheckBox id="savePasswordCheckBox" type="checkbox" [checked]="savePasswordname" 
+       (change)="onSavePasswordChanged(savePasswordCheckBox.checked)" />
+    <label>Show Password</label><br/>
+    <div>
+       <label>FirstName: </label>
+       <input type="text" class="textbox" name="firstname" placeholder="name" formControlName="firstname">
+    </div><br/>
+    <div>
+       <label>LastName: </label>
+       <input type="text" class="textbox" name="lastname" placeholder="name" formControlName="lastname">
+    </div><br/>
+    <div>
+       <input type="submit" class="button default-button" value="ADD" [disabled]="!loggedInForm.valid">
+       <input type="button" class="button default-button" value="MODIFY" (click)="get(loggedInForm.value)">
+       <input type="button" class="button default-button" value="DELETE" (click)="delete(loggedInForm.value)">
+    </div><br/>
+    <label>All Fields are MANDATORY To Add New User!</label><br/><br/>
+    <label>EmailId and Password are MANDATORY To Modify and Delete Existing User!</label><br/><br/>
+    <label>All Fields are MANDATORY To Add New User!</label><br/>
+    <input type="button" routerLink="/loginpage" class="button default-button" value="LOGIN">
+  </form>
+</div>

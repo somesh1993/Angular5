@@ -1,0 +1,31 @@
+<div>
+  <input type="submit" routerLink="/loginpage" class="button default-button" value="LOGOUT" >
+
+  <div style="width: 80%">
+      <ngx-datatable class="material"
+                     [headerHeight]="50"
+                     [rowHeight]="'auto'"
+                     [rows]="rows"
+                     [columns]="columns"
+                     [columnMode]="'force'"
+                     [footerHeight]="50"
+                     [count]="true"
+                     [limit]="5">
+                     <ngx-datatable-column name="FirstName">
+                         <ng-template ngx-datatable-cell-template let-value="value">
+                         {{value}}
+                         </ng-template>
+                      </ngx-datatable-column>
+                      <ngx-datatable-column name="LastName" >
+                         <ng-template ngx-datatable-cell-template let-value="value">
+                         {{value}}
+                         </ng-template>
+                      </ngx-datatable-column>
+                      <ngx-datatable-column name="emailId" [sortable]='false' prop="EmailId">
+                         <ng-template ngx-datatable-cell-template let-value="value"  >
+                         {{value}}
+                         </ng-template>
+                      </ngx-datatable-column>
+      </ngx-datatable>
+  </div>
+</div>

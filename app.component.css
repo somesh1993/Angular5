@@ -1,0 +1,69 @@
+.check{
+    float:left;
+    margin-left: 20px;
+    margin-right: 100px;
+}
+
+/* ol{
+    float:left;
+    padding-left: 10px;
+    margin-right: 10px;
+} */
+
+/* li{
+    margin-left: 10px;
+    margin-right: 10px;
+} */
+
+/* ul{
+    float:right;
+    padding-left: 10px;
+    margin-right: 10px;
+} */
+
+.main-nav{
+    list-style: none;
+    float:right;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main-nav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.random1{
+    float:left;
+    padding-left: 0px;
+}
+
+.random2{
+    float:left;
+    padding-left: 80px;
+}
+
+.random3{
+    float:left;
+    padding-left: 80px;
+
+}
+
+.random4{
+    float:left;
+    padding-left: 120px;
+    
+}
+
+.dd{
+    background-color: blue;
+}
+
+.tt{
+    background-color: green;
+}
